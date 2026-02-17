@@ -15,14 +15,14 @@ This project demonstrates the end-to-end deployment of a dual-node security audi
 
 ### 1. Infrastructure Deployment & VNet Configuration
 I provisioned two Ubuntu instances—an **Auditor** node and a **Target** node—within the **South Africa North** region. To ensure internal communication, I manually configured both nodes to reside on the same Virtual Network (`vnet-southafricanorth`), simulating an enterprise internal subnet.
-* [Infrastructure Setup](https://github.com/descypherr/Azure-Network-Security-Automation/blob/main/screenshots/1_auditor_vm_deployment.png)
-* [Network Adjacency Configuration](https://github.com/descypherr/Azure-Network-Security-Automation/blob/main/screenshots/2_target_vm_networking.png)
+* [Infrastructure Setup](https://github.com/descypherr/Azure-Network-Security-Automation/blob/main/screenshots/1_azure_auditor_deployment.png)
+* [Network Adjacency Configuration](https://github.com/descypherr/Azure-Network-Security-Automation/blob/main/screenshots/2_target_vm_networking.png.png)
 
 
 
 ### 2. Environment Hardening & CLI Operations
 Using the **Linux CLI**, I prepared the Auditor node by installing Nmap and configuring the local environment. This phase involved managing file system permissions and utilizing standard administrative commands to ensure tool integrity and execution capability.
-* [CLI Environment Management](https://github.com/descypherr/Azure-Network-Security-Automation/blob/main/screenshots/3_linux_command_ops.png)
+* [CLI Environment Management](https://github.com/descypherr/Azure-Network-Security-Automation/blob/main/screenshots/3_linux_command_ops..png)
 
 ### 3. Automation Engineering (The "Net-Scan-Pro" Script)
 I developed a custom Bash script, `reacon_auto.sh`, to standardize the scanning process. The script’s logic utilizes Nmap for discovery and incorporates a `grep`-based risk-weighting engine that automatically flags high-impact ports like SSH (22), HTTP (80), and RDP (3389).
